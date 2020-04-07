@@ -22,34 +22,38 @@
                                 <rect key="frame" x="149.66666666666666" y="92" width="114.99999999999997" height="115"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your hourly wage" borderStyle="roundedRect" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxy-rg-IPe" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="35" y="285" width="344" height="34"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Price" borderStyle="roundedRect" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-qs-axt" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="35" y="344" width="344" height="34"/>
+                                <rect key="frame" x="35" y="285" width="344" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0BX-Nx-xKg"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-xf-iFy">
-                                <rect key="frame" x="186" y="416" width="42" height="21"/>
+                                <rect key="frame" x="186" y="428" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Price" borderStyle="roundedRect" placeholder="Your hourly wage" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jjs-qs-axt" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="35" y="350" width="344" height="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Jjs-qs-axt" firstAttribute="top" secondItem="jxy-rg-IPe" secondAttribute="bottom" constant="25" id="1V8-qd-jiR"/>
-                            <constraint firstItem="jxy-rg-IPe" firstAttribute="leading" secondItem="Jjs-qs-axt" secondAttribute="leading" id="1qs-ta-E1m"/>
                             <constraint firstAttribute="trailing" secondItem="gtq-S4-6cs" secondAttribute="trailing" id="A5T-fj-DxF"/>
-                            <constraint firstItem="jxy-rg-IPe" firstAttribute="trailing" secondItem="Jjs-qs-axt" secondAttribute="trailing" id="Loc-Us-ke1"/>
+                            <constraint firstItem="Jjs-qs-axt" firstAttribute="leading" secondItem="jxy-rg-IPe" secondAttribute="leading" id="Jvn-0g-sOs"/>
                             <constraint firstItem="GUm-xf-iFy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NFp-lk-9Qa"/>
                             <constraint firstItem="jxy-rg-IPe" firstAttribute="top" secondItem="ngi-eD-xCK" secondAttribute="bottom" constant="78" id="RC4-UR-AdX"/>
+                            <constraint firstItem="Jjs-qs-axt" firstAttribute="height" secondItem="jxy-rg-IPe" secondAttribute="height" id="Sbh-Jo-22W"/>
                             <constraint firstItem="gtq-S4-6cs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z98-ad-Ttr"/>
                             <constraint firstItem="gtq-S4-6cs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bTz-88-Km3"/>
+                            <constraint firstItem="Jjs-qs-axt" firstAttribute="trailing" secondItem="jxy-rg-IPe" secondAttribute="trailing" id="bir-mz-P9A"/>
+                            <constraint firstItem="Jjs-qs-axt" firstAttribute="top" secondItem="jxy-rg-IPe" secondAttribute="bottom" constant="25" id="ctA-4B-TlY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="gtq-S4-6cs" secondAttribute="bottom" id="eYC-SD-zc2"/>
                             <constraint firstItem="ngi-eD-xCK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="fUk-8a-RW9"/>
                             <constraint firstItem="GUm-xf-iFy" firstAttribute="top" secondItem="Jjs-qs-axt" secondAttribute="bottom" constant="38" id="fWb-C3-z7Q"/>
@@ -59,6 +63,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="Jjs-qs-axt" id="Wp9-cI-mcZ"/>
+                        <outlet property="wageTxt" destination="jxy-rg-IPe" id="KaA-KZ-iOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
