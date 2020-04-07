@@ -26,7 +26,7 @@ class CurrencyTxtField: UITextField {
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2523009418)
         layer.cornerRadius = 5.0
         textAlignment = .center
-        
+        // if placeholder text is not nil, then set color of text to white.
         if let p = placeholder {
             let place = NSAttributedString(string: p, attributes: [.foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)])
             attributedPlaceholder = place
